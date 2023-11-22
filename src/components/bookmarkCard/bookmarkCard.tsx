@@ -1,7 +1,7 @@
 import '@components/bookmarkCard/bookmarkCard.css';
 import withSuspense from '@src/shared/hoc/withSuspense';
 import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
-import { FaPen } from "react-icons/fa6";
+import { FaPen, FaArrowRightLong } from "react-icons/fa6";
 
 const BookmarkCard = (props:any) => {
 
@@ -15,9 +15,11 @@ const BookmarkCard = (props:any) => {
           </div>
           <p>{props.url}</p>
         </div>
-        <FaPen color='dfdfdf' size={'24px'}/>
+        <FaPen color='dfdfdf' size={'16px'}/>
       </div>
-      
+      <div className='bookmark-allow'>
+        <FaArrowRightLong color='fdfdfd'/>
+      </div>
     </div>
 )};
 

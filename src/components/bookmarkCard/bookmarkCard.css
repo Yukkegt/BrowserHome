@@ -1,16 +1,18 @@
 .bookmark-card {
+    display: grid;
     background-color: white;
     border: 1px solid #dfdfdf;
     border-radius: 16px;
-    height: 320px;
+    height: 100%;
 }
 .bookmark-content {
-    margin: 32px;
+    padding: 32px;
     display: flex;
     justify-content: space-between;
 }
 
 .bookmark-content :nth-child(2) {
+    margin-right: auto;
     /* float: left;
     flex-flow: column; */
 }
@@ -24,6 +26,10 @@
 }
 
 .bookmark-text {
+    display: flex;
+    margin-left: 32px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .bookmark-title {
@@ -31,4 +37,19 @@
     font-size: large;
     font-weight: 600;
 
+}
+
+.bookmark-allow {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #4d4d4d;
+    align-self: end;
+    justify-self: end;
+    margin-right: 32px;
+    margin-bottom: 32px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
