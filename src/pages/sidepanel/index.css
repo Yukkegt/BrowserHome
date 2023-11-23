@@ -5,11 +5,24 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Yu Gothic', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  -moz-osx-font-smoothing: grayscale;  
   position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body::-webkit-scrollbar{
+  width: 4px;
+  height: 1px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #999999;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #ffffff;
 }
