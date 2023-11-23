@@ -1,0 +1,57 @@
+.tree-folder-container {
+}
+
+.tree-folder-container>.tree-folder-container {
+    width: 98%;
+    margin-left: auto;
+}
+
+.tree-folder-container>.tree-item {
+    width: 98%;
+}
+
+.tree-folder {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    background-color: white;
+    border: 1px solid #dfdfdf;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+.tree-item {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    margin-left: auto;
+    background-color: white;
+    border: 1px solid #dfdfdf;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+
+}
+
+.tree-item-text {
+    margin-left: 16px;
+    font-weight: 400;
+    font-size: medium;
+}
+
+
+details[open].tree-folder-container>.tree-folder-container{
+    animation:fadeIn 0.4s linear;
+}
+
+@keyframes fadeIn {
+    0% {
+      
+      transform: translateY(-10px); /* 上から表示 */
+    }
+    100% {
+      
+      transform: none;
+    }
+  }
+  
