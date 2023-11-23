@@ -18,6 +18,7 @@
     border: 1px solid #dfdfdf;
     border-radius: 16px;
     padding: 16px;
+    cursor: pointer;
 }
 
 .tree-item {
@@ -30,13 +31,18 @@
     border-radius: 16px;
     padding: 16px;
     box-sizing: border-box;
-
+    text-decoration-line: none;
+    text-decoration: none;
+    color: black;
 }
 
 .tree-item-text {
     margin-left: 16px;
     font-weight: 400;
     font-size: medium;
+    -webkit-user-select: none;
+    user-select: none;
+
 }
 
 
