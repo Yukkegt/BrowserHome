@@ -8,8 +8,7 @@ import TreeView from '@root/src/components/treeView/treeView';
 const Newtab = () => {
  
   return (
-    <div
-      className="App">
+    <div className="App">
         <div className='container grid'>
           <BookmarkCard title="Youtube" url="https://www.youtube.com/" />
           <BookmarkCard title="はてなブログ" />
@@ -17,7 +16,7 @@ const Newtab = () => {
           <BookmarkCard title="Wantedly" />
           <BookmarkCard title="GitHub" />
           <BookmarkCard title="Amazon" />
-          <BookmarkCard title="Pixiv" />          
+          <BookmarkCard title="Pixiv" />
 
         </div>
         <div className='container'>          
