@@ -38,19 +38,7 @@
 }
 
 .grid {
-    grid-column: 4;
-    gap: 16px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.container {  
     display: grid;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 64px;
-    /* height: 100%; */
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 32px 32px;
@@ -59,5 +47,12 @@
       ". . . ."
       ". . . ."
       ". . . .";
+}
+
+.container {  
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+    /* height: 100%; */
   }
-  
