@@ -19,6 +19,18 @@
     width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 64px;
+    margin-top: 32px;
     /* height: 100%; */
   }
+
+.add-button {
+  background-color: #dfdfdf;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  padding: 4px;
+}
