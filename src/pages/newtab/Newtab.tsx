@@ -11,19 +11,19 @@ const Newtab = () => {
   return (
     <div className="App">
       <div className='container'>
-      <button className='add-button' >
+      <button type='button' title='add-bookmark' className='add-button' >
         <FaPlus/>
       </button>
 
       </div>
         <div className='container grid'>
           <BookmarkCard title="Youtube" url="https://www.youtube.com/" />
-          <BookmarkCard title="はてなブログ" />
-          <BookmarkCard title="X" />
-          <BookmarkCard title="Wantedly" />
-          <BookmarkCard title="GitHub" />
-          <BookmarkCard title="Amazon" />
-          <BookmarkCard title="Pixiv" />
+          <BookmarkCard title="はてなブログ" url="" />
+          <BookmarkCard title="X" url="" />
+          <BookmarkCard title="Wantedly" url="" />
+          <BookmarkCard title="GitHub" url="" />
+          <BookmarkCard title="Amazon" url="" />
+          <BookmarkCard title="Pixiv" url="" />
 
         </div>
         <div className='container'>          
