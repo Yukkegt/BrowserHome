@@ -6,16 +6,16 @@ import { useState } from 'react';
 
 const BookmarkCard = (props: any) => {
   const [isNewCard, setNewCardMode] = useState(true);
-  // const [title, setTitle] = useState("");
-  // const [url, setURL] = useState("");
+  const [title, setTitle] = useState(props.title);
+  const [url, setURL] = useState(props.url);
+  const onInputTitleChanged = (e) => setTitle(e.target.value);
+  const onInputURLChanged = (e) => setURL(e.target.value);
 
   const NewCardInput = (_title: string, _url: string) => {
     return (
       <div className='bookmark-text'>
-        {/* <input placeholder='タイトル' className='bookmark-title'>
-          {_title}
-        </input> */}
-        {/* <input placeholder='url'>{_url}</input> */}
+        <input type='text' placeholder='タイトル' className='bookmark-title' value={_title} onChange={onInputTitleChanged} />
+        <input type='url' placeholder='url' value={_url} onChange={onInputURLChanged} />
       </div>    
     );
   }
@@ -35,7 +35,7 @@ const BookmarkCard = (props: any) => {
     <div className='bookmark-card'>
       <div className='bookmark-content'>
         <img title='bookmark-img' className='bookmark-img'></img>
-        {isNewCard ? NewCardInput(props.title, props.url) : CardText(props.title,props.url)
+        {isNewCard ? NewCardInput(title, url) : CardText(title,url)
         }
         <FaPen size={'16px'}/>
       </div>
