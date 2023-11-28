@@ -17,14 +17,11 @@ const TreeViewItem: React.FC<BookmarkProps> = ({ bookmark }) => {
   useEffect(() => {
     // ブックマークを取得    
     setBookmarks(bookmark.children);
-    console.log(bookmark);
-
-    
   }, []);
 
   return (
           <a className='tree-item' href={bookmark.url}>
-          <Favicon title={bookmark.title} url={bookmark.url}/>
+          <Favicon title={bookmark.title} src={bookmark.url}/>
             <div className='tree-item-text'>
               {bookmark.title}
             </div>

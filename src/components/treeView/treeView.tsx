@@ -17,8 +17,6 @@ const TreeView = () => {
     // ブックマークを取得
     chrome.bookmarks.getTree((items) => {
       setBookmarks(items[0].children);
-      console.log(items[0].children);
-
     });
   }, []);
   
