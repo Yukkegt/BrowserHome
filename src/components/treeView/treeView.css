@@ -46,8 +46,8 @@
 }
 
 
-details[open].tree-folder-container>.tree-folder-container{
-    animation:fadeIn 0.4s linear;
+details[open].tree-folder-container>.tree-folder~*{
+    animation:fadeIn 0.2s linear;
 }
 
 @keyframes fadeIn {

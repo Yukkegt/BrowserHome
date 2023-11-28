@@ -1,3 +1,9 @@
+a {
+    color: black;
+    text-decoration-line: none;
+    -webkit-tap-highlight-color: transparent; /* ここで一旦ハイライトを全部なくす */
+  }
+
 .bookmark-card {
     display: grid;
     background-color: white;
@@ -12,7 +18,7 @@
 }
 
 .bookmark-content :nth-child(2) {
-    margin-right: auto;
+    /* margin-right: auto; */
     /* float: left;
     flex-flow: column; */
 }
@@ -27,7 +33,8 @@
 
 .bookmark-text {
     display: flex;
-    margin-left: 32px;
+    margin-left: 16px;
+    margin-right: 16px;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -37,6 +44,15 @@
     font-size: large;
     font-weight: 600;
 
+}
+
+.bookmark-update {
+    border: 0px;
+    background: none;
+    background-color: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
 }
 
 .bookmark-allow {
@@ -52,4 +68,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.bookmark-input {
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: #dadada;
+    border-width: 0.5px;
+
 }
