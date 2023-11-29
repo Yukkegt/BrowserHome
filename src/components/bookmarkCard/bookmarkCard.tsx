@@ -5,10 +5,15 @@ import { FaPen, FaArrowRightLong } from "react-icons/fa6";
 import { useState } from 'react';
 import Favicon from '../favicon';
 
-const BookmarkCard = (props: any) => {
+interface BookmarkCardProps {
+  propTitle: string,
+  propUrl:string
+}
+
+const BookmarkCard: React.FC<BookmarkCardProps> = ({propTitle, propUrl}) => {
   const [isNewCard, setNewCardMode] = useState(false);
-  const [title, setTitle] = useState(props.title);
-  const [url, setURL] = useState(props.url);
+  const [title, setTitle] = useState(propTitle);
+  const [url, setURL] = useState(propUrl);
   const onInputTitleChanged = (e) => setTitle(e.target.value);
   const onInputURLChanged = (e) => setURL(e.target.value);
 
