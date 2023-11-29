@@ -5,9 +5,12 @@ import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
 import BookmarkCard from '@root/src/components/bookmarkCard/bookmarkCard';
 import TreeView from '@root/src/components/treeView/treeView';
 import { FaPlus } from "react-icons/fa6";
+import { useState } from 'react';
+import bookmarkData from '../../shared/jsonStorages/bookmark';
 
 const Newtab = () => {
- 
+  const [bookmarks, setBookmarks] = useState(bookmarkData);  
+
   return (
     <div className="App">
       <div className='container'>
@@ -17,14 +20,9 @@ const Newtab = () => {
 
       </div>
         <div className='container grid'>
-          <BookmarkCard title="Youtube" url="https://www.youtube.com/" />
-          <BookmarkCard title="はてなブログ" url="" />
-          <BookmarkCard title="X" url="" />
-          <BookmarkCard title="Wantedly" url="" />
-          <BookmarkCard title="GitHub" url="" />
-          <BookmarkCard title="Amazon" url="" />
-          <BookmarkCard title="Pixiv" url="" />
-
+          {bookmarks.bookmarks.map((bookmark) => (
+            <BookmarkCard propTitle={bookmark.title} propUrl={bookmark.url} />            
+          ))}
         </div>
         <div className='container'>          
             <TreeView />          
