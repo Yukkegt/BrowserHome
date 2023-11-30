@@ -5,7 +5,7 @@ a {
   }
 
 .bookmark-card {
-    display: grid;
+    display: flex;
     background-color: white;
     border: 1px solid #dfdfdf;
     border-radius: 16px;
@@ -15,12 +15,6 @@ a {
     padding: 32px;
     display: flex;
     justify-content: space-between;
-}
-
-.bookmark-content :nth-child(2) {
-    /* margin-right: auto; */
-    /* float: left;
-    flex-flow: column; */
 }
 
 .bookmark-img {
@@ -40,7 +34,6 @@ a {
 }
 
 .bookmark-title {
-    /* margin-left: 32px; */
     font-size: large;
     font-weight: 600;
 
@@ -62,8 +55,7 @@ a {
     background-color: #dfdfdf;
     align-self: end;
     justify-self: end;
-    margin-right: 32px;
-    margin-bottom: 32px;
+    margin-top: 32px;
     
     display: flex;
     align-items: center;
@@ -77,5 +69,16 @@ a {
     border-style: solid;
     border-color: #dadada;
     border-width: 0.5px;
+
+}
+
+.bookmark-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 32px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 
 }
