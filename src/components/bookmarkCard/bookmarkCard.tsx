@@ -38,20 +38,23 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({propTitle, propUrl}) => {
   }
 
   return (
-    <a href={url}>
-      <div className='bookmark-card'>
+    <div className='bookmark-card'>
+      <a href={url}>
         <div className='bookmark-content'>
           <Favicon className='bookmark-img' title={title} src={url} />
           {isNewCard ? NewCardInput(title, url) : CardText(title,url)}
-          <button type='button' title='a' className='bookmark-update'>
-            <FaPen size={'16px'}/>        
-          </button>
         </div>
+      </a>
+      <div className='bookmark-menu'>
+        <button type='button' title='a' className='bookmark-update' onClick={() => setNewCardMode(!isNewCard)}>
+          <FaPen size={'16px'}/>        
+        </button>
         <div className='bookmark-allow'>
           <FaArrowRightLong />
         </div>
+
       </div>
-    </a>
+    </div>
    
 )};
 
