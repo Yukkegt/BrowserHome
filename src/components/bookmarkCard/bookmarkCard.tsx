@@ -1,6 +1,4 @@
 import '@components/bookmarkCard/bookmarkCard.css';
-import withSuspense from '@src/shared/hoc/withSuspense';
-import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
 import { FaPen, FaArrowRightLong } from "react-icons/fa6";
 import { useState } from 'react';
 import Favicon from '../favicon';
@@ -19,32 +17,35 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({propTitle, propUrl}) => {
 
   const NewCardInput = (_title: string, _url: string) => {
     return (
-      <div className='bookmark-text'>
-        <input type='text' placeholder='タイトル' className='bookmark-input' value={_title} onChange={onInputTitleChanged} />
-        <input type='url' placeholder='url' className='bookmark-input' value={_url} onChange={onInputURLChanged} />
-      </div>    
+      <div className='bookmark-content'>
+        <Favicon className='bookmark-img' title={title} src={url} />
+        <div className='bookmark-text'>
+          <input type='text' placeholder='タイトル' className='bookmark-input' value={_title} onChange={onInputTitleChanged} />
+          <input type='url' placeholder='url' className='bookmark-input' value={_url} onChange={onInputURLChanged} />
+        </div>    
+      </div>
     );
   }
 
   const CardText = (_title: string, _url: string) => {
     return (
-      <div className='bookmark-text'>
-        <div className='bookmark-title'>
-          {_title}
+      <a href={url}>
+        <div className='bookmark-content'>
+          <Favicon className='bookmark-img' title={title} src={url} />
+          <div className='bookmark-text'>
+            <div className='bookmark-title'>
+              {_title}
+            </div>
+            <p>{_url}</p>
+          </div>
         </div>
-        <p>{_url}</p>
-      </div>
+      </a>
     );
   }
 
   return (
     <div className='bookmark-card'>
-      <a href={url}>
-        <div className='bookmark-content'>
-          <Favicon className='bookmark-img' title={title} src={url} />
-          {isNewCard ? NewCardInput(title, url) : CardText(title,url)}
-        </div>
-      </a>
+      {isNewCard ? NewCardInput(title, url) : CardText(title,url)}
       <div className='bookmark-menu'>
         <button type='button' title='a' className='bookmark-update' onClick={() => setNewCardMode(!isNewCard)}>
           <FaPen size={'16px'}/>        
@@ -52,10 +53,9 @@ const BookmarkCard: React.FC<BookmarkCardProps> = ({propTitle, propUrl}) => {
         <div className='bookmark-allow'>
           <FaArrowRightLong />
         </div>
-
       </div>
-    </div>
-   
-)};
+    </div>   
+  )
+};
 
 export default BookmarkCard;
