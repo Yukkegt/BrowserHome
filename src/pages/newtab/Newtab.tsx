@@ -4,7 +4,7 @@ import withSuspense from '@src/shared/hoc/withSuspense';
 import withErrorBoundary from '@src/shared/hoc/withErrorBoundary';
 import BookmarkCard from '@root/src/components/bookmarkCard/bookmarkCard';
 import TreeView from '@root/src/components/treeView/treeView';
-import { FaPlus } from "react-icons/fa6";
+import { FaArrowRightLong, FaPlus } from "react-icons/fa6";
 import { useState } from 'react';
 import bookmarkData from '../../shared/jsonStorages/bookmark';
 
@@ -15,18 +15,21 @@ const Newtab = () => {
   return (
     <div className="App">
       <div className='container'>
-      <div className='add-button-area'>
-        <button type='button' title='add-bookmark' className={`add-button ${isAddMode ? 'active' : ''}`} onClick={() => setAddMode(!isAddMode)} >
+      <form className='add-button-area'>
+        <button type='button' title='ブックマークを追加' className={`add-button ${isAddMode ? 'active' : ''}`} onClick={() => setAddMode(!isAddMode)} >
           <FaPlus className='add-bookmark-icon'/>
         </button>
         {isAddMode ? 
           <>
             <input className='add-bookmark-input fade-down' title='タイトル' placeholder='タイトル'></input>
             <input className='add-bookmark-input fade-down' title='URL' placeholder='URL'></input>
+            <button type='submit' className='submit-allow fade-down' title='ブックマークを登録'>
+              <FaArrowRightLong />
+            </button>
           </>
           :<></>          
         }
-      </div>
+      </form>
       
 
       </div>
