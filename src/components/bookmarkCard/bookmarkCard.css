@@ -10,7 +10,13 @@ a {
     border: 1px solid #dfdfdf;
     border-radius: 16px;
     height: 100%;
+    transition: all 0.4s;
 }
+
+.bookmark-card:hover {
+    filter: drop-shadow(10px 10px 4px #c5c5cc);
+}
+
 .bookmark-content {
     padding: 32px;
     display: flex;
@@ -41,11 +47,16 @@ a {
 
 .bookmark-update {
     border: 0px;
-    background: none;
-    background-color: none;
+    background-color: white;
     width: 32px;
     height: 32px;
     border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.bookmark-update:hover {
+    background-color: #dadada;
 }
 
 .bookmark-allow {
@@ -59,7 +70,13 @@ a {
     
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.bookmark-card:hover .bookmark-allow{
+    background-color: #9c9c9c;
 }
 
 .bookmark-input {
@@ -69,7 +86,6 @@ a {
     border-style: solid;
     border-color: #dadada;
     border-width: 0.5px;
-
 }
 
 .bookmark-menu {
@@ -80,5 +96,4 @@ a {
     margin-right: 32px;
     margin-top: 32px;
     margin-bottom: 32px;
-
 }

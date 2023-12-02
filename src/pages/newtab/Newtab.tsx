@@ -10,13 +10,24 @@ import bookmarkData from '../../shared/jsonStorages/bookmark';
 
 const Newtab = () => {
   const [bookmarks, setBookmarks] = useState(bookmarkData);  
+  const [isAddMode, setAddMode] = useState(false);
 
   return (
     <div className="App">
       <div className='container'>
-      <button type='button' title='add-bookmark' className='add-button' >
-        <FaPlus/>
-      </button>
+      <div className='add-button-area'>
+        <button type='button' title='add-bookmark' className={`add-button ${isAddMode ? 'active' : ''}`} onClick={() => setAddMode(!isAddMode)} >
+          <FaPlus className='add-bookmark-icon'/>
+        </button>
+        {isAddMode ? 
+          <>
+            <input className='add-bookmark-input fade-down' title='タイトル' placeholder='タイトル'></input>
+            <input className='add-bookmark-input fade-down' title='URL' placeholder='URL'></input>
+          </>
+          :<></>          
+        }
+      </div>
+      
 
       </div>
         <div className='container grid'>
